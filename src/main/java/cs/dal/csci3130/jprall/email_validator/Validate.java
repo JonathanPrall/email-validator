@@ -9,6 +9,12 @@ public class Validate {
 			
 		if (!email.contains("."))
 			numErrors++;
+		
+		if (!lenTest(email))
+			numErrors++;
+		
+		if (!domainName(email))
+			numErrors++;
 		return numErrors;
 	}
 	
@@ -25,5 +31,29 @@ public class Validate {
 		if (numHits == 1)
 			return true;
 		return false;
+	}
+	
+	public static boolean lenTest(String email) {
+		if (email.length() > 5)
+			return true;
+		return false;
+	}
+	
+	public static boolean domainName(String email) {
+		if (email.contains("dal"))
+			return true;
+		else if (email.contains("hotmail"))
+			return true;
+		else if (email.contains("outlook"))
+			return true;
+		else if (email.contains("gmail"))
+			return true;
+		else if (email.contains("yahoo"))
+			return true;
+		else if (email.contains("sympatico"))
+			return true;
+		
+		return false;
+		
 	}
 }
