@@ -1,4 +1,4 @@
-package cs.dal.csci3130.jprall.email_validator;
+package com.example.myapplication;
 
 import javax.servlet.annotation.WebServlet;
 
