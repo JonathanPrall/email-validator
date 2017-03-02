@@ -2,9 +2,9 @@ package cs.dal.csci3130.jprall.email_validator;
 
 public class Validate {
 	
-	public int Tests(String email) {
+	public static int Tests(String email) {
 		int numErrors = 0;
-		if (!atTest(email));
+		if (!atTest(email))
 			numErrors++;
 			
 		if (!email.contains("."))
@@ -12,7 +12,7 @@ public class Validate {
 		return numErrors;
 	}
 	
-	public boolean atTest(String email) {
+	public static boolean atTest(String email) {
 		char[] emailArray = email.toCharArray();
 		int numHits = 0;
 		
@@ -21,8 +21,8 @@ public class Validate {
 			if (emailArray[i] == '@')
 				numHits++;
 		}
-		
-		if (numHits == 0)
+		System.out.print(numHits);
+		if (numHits == 1)
 			return true;
 		return false;
 	}
